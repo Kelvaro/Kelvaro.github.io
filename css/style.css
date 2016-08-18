@@ -202,15 +202,15 @@ p {
 }
 .work-info h5 {
     font-size: 1.3em;
-    color: #F7E612;
+    color: darkcyan;
     margin-bottom: .5em;
-    border: 1px solid #F7E612;
+    border: 1px solid darkcyan;
     display: inline-block;
     padding: 0 1.2em;
 }
 .work-info h5 span.glyphicon {
     font-size: 0.9em;
-    color: #fff;
+    color: darkcyan;
     background: #008B8B;
     padding: 1em;
     -webkit-border-radius: 70%;
@@ -261,7 +261,7 @@ p {
 /*--//work--*/
 /*--education--*/
 .education .work-info h5 {
-    color: #000;
+    color: darkcyan;
 }
 /*--//education--*/
 /*--skills--*/

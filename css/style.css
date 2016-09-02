@@ -146,6 +146,7 @@ p {
     line-height: 1.8em;
 
 
+
 }
 .about-right {
     padding-left: 5em;
@@ -436,6 +437,19 @@ h2.resp-accordion {
     font-size: 1em;
     color: #fff;
 }
+
+.grid h3 a {
+    position: relative;
+
+    padding: 0.5em 0;
+	-moz-opacity: 0;
+    opacity: 0;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #fff;	
+		
+}
+
 .grid h3 span {
     font-weight: 800;
     margin-left: 5px;

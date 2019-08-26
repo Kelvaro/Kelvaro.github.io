@@ -3,16 +3,26 @@
 <html>
 <head>
 <title>Johnny Kang</title>
-<!--mobile apps-->
-
-<!--mobile apps-->
 <!--Custom Theme files-->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+
 <link rel="stylesheet" href="css/swipebox.css">
 <!--//Custom Theme files-->
 <!--js-->
+<script type="text/javascript" src="js/ResponsiveGrid.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+        $(function () {
+            // Instantiate MixItUp:
+            $('#Container1').mixItUp({
+                selectors: {
+                    filter: '.filter'
+                }
+            });
+        });
+    </script>
 <!-- //js -->
 <!--web-fonts-->
 <link href='//fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -239,84 +249,28 @@
 	</div>
 	<!--//education-->
 	<!--portfolio-->
+	<div id="Container1"> 
 	<div id="projects" class="portfolio">
 		<div class="container">
 			<h3 class="title wow zoomInLeft animated" data-wow-delay=".5s">My Projects</h3>
 			<div class="sap_tabs">			
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-						<li class="resp-tab-item"><span>All</span></li>
-						<li class="resp-tab-item"><span>Html</span></li>
-						<li class="resp-tab-item"><span>Java</span></li>
-						<li class="resp-tab-item"><span>PHP</span></li>					
+						<li class="filter active" data-filter="all"><span>All</span></li>
+						<li class="filter" data-filter=".html"><span>Html</span></li>
+						<li class="filter" data-filter=".java"><span>Java</span></li>
+						<li class="filter" data-filter=".php"><span>PHP</span></li>					
 					</ul>	
 					<div class="clearfix"> </div>	
-					<div class="resp-tabs-container">
-						<div class="tab-1 resp-tab-content"> 
 						<!-- Filter Section "ALL" -->
 							<div class="tab_img">
 								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g1.jpg" class="swipebox" title="Personal Website">
-											<img src="images/g1.jpg" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3><a href="https://github.com/Kelvaro/Kelvaro.github.io">Personal Website </a></h3>
-												<p>&#8226; Written in HTML, CSS, and JavaScript </p>
-												<p>&#8226; Display of previous projects and work experience </p>
-												<p>&#8226; Deployed to kelvaro.github.io </p>
-											</div>
-										</a>	
-									</div>
-								</div>
-								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g2.jpg" class="swipebox" title="Emris Web Framework">
-											<img src="images/g2.jpg" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3>Emris.cc</span></h3>
-												<p>&#8226; Developed in a MVC Ember, Ruby On Rails, and Handlebar.JS</p>
-												<p>&#8226; Developed to act as a web framework that allows users to customize their social hubs similarly to tumblr</p>
-											</div>
-										</a>	
-									</div>
-								</div>
-								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g3.jpg" class="swipebox" title="St.Mary's School Phone App">
-											<img src="images/g3.jpg" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3>St.Mary's School</span></h3>
-												<p>&#8226; Developed with Xamarin, a crossplatform mobile development tool.</p>
-												<p>&#8226; Allows users to send absentee notices, search lunch menus, and alert them of any upcoming events. </p>
-											</div>
-										</a>	
-									</div>
-								</div>
-								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g10.jpg" class="swipebox" title="Personal Website">
-											<img src="images/g10.jpg" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3>Seoul Express Website</h3>
-												<p>&#8226; Written in HTML, CSS, and JavaScript. </p>
-												<p>&#8226; Displays menu, contact, and location.</p>
-												<p>&#8226; Currently in development </p>
-											</div>
-										</a>	
-									</div>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="tab-1 resp-tab-content">
-						<!-- Filter Section "HTML" -->
-							<div class="tab_img">
-								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g1.jpg" class="swipebox" title="Personal Website">
+									<div class="grid html">
+										<a href="https://github.com/Kelvaro/Kelvaro.github.io" class="none" title="Personal Website">
 											<img src="images/g1.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
 												<h3>Personal Website</h3>
+												</a>	
 												<p>&#8226; Written in HTML, CSS, and JavaScript </p>
 												<p>&#8226; Display of previous projects and work experience </p>
 												<p>&#8226; Deployed to kelvaro.github.io </p>
@@ -325,19 +279,32 @@
 									</div>
 								</div>
 								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g3.jpg" class="swipebox" title="St. Mary's School Mobile App">
-											<img src="images/g3.jpg" alt="" class="img-responsive" />
+									<div class="grid php">
+										<a href="images/g2.jpg" class="swipebox" title="Emris Web Framework">
+											<img src="images/g2.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
-												<h3>St.Mary's School</span></h3>
-												<p>&#8226; Developed with Xamarin, a crossplatform mobile development tool.</p>
-												<p>&#8226; Allows users to send absentee notices, search lunch menus, and alert them of any upcoming events. </p>
+												<h3>Emris.cc</span></h3>
+												<p>&#8226; Developed in a MVC Ember, Ruby On Rails, and Handlebar.JS</p>
+												<p>&#8226; Developed to act as a web framework that allows users to customize their social hubs similarly to tumblr</p>
 											</div>
 										</a>	
 									</div>
 								</div>
 								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
+									<div class="grid html">
+										<a href="https://play.google.com/store/apps/details?id=ca.bc.stmary.android&hl=en_GB" class="" title="St.Mary's School Phone App">
+											<img src="images/g3.jpg" alt="" class="img-responsive" />
+											<div class="figcaption">
+												<h3>St.Mary's School</span></h3>
+												</a>	
+												<p>&#8226; Developed with Xamarin, a crossplatform mobile development tool.</p>
+												<p>&#8226; Allows users to send absentee notices, search lunch menus, and alert them of any upcoming events. </p>
+											</div>
+										
+									</div>
+								</div>
+								<div class="col-md-4 portfolio-grids">
+									<div class="grid html">
 										<a href="images/g10.jpg" class="swipebox" title="Personal Website">
 											<img src="images/g10.jpg" alt="" class="img-responsive" />
 											<div class="figcaption">
@@ -349,47 +316,10 @@
 										</a>	
 									</div>
 								</div>
-								<div class="col-md-4 portfolio-grids">
-									<div class="grid">
-										<a href="images/g2.jpg" class="swipebox" title="Emris Web Framework">
-											<img src="images/g2.jpg" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3>Emris.cc</span></h3>
-												<p>&#8226; Developed in a MVC Ember, Ruby On Rails, and Handlebar.JS</p>
-												<p>&#8226; Developed to act as a web framework that allows users to customize their social hubs similarly to tumblr</p>
-											</div>
-										</a>	
-									</div>
-								</div>								
 								<div class="clearfix"> </div>
 							</div>
-						</div>
-						<div class="tab-1 resp-tab-content">
-						<!-- Filter section "JAVA" -->
-							<div class="tab_img">
-								
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="tab-1 resp-tab-content">
-						<!-- Filter Section "PHP" -->
-							<div class="tab_img">
-								<div class="col-md-4 portfolio-grids">
-									<div class="grid effect-sarah">
-										<a href="images/g2.jpg" class="swipebox" title="Emris Web Framework">
-											<img src="images/g2.jpg" alt="" class="img-responsive" />
-											<div class="figcaption">
-												<h3>Emris.cc</span></h3>
-												<p>&#8226; Developed in a MVC Ember, Ruby On Rails, and Handlebar.JS</p>
-												<p>&#8226; Developed to act as a web framework that allows users to customize their social hubs similarly to tumblr</p>
-											</div>
-										</a>	
-									</div>
-								</div>			
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-					</div>
+						
+					
 				</div>
 			</div>
 			<!--ResponsiveTabs-->
@@ -414,7 +344,23 @@
 			<!-- //swipe box js -->
 		</div>
 	</div>
+	</div>
 	<!--//portfolio-->
+	<!--//TESTING RESPONSIVE GRID -->
+        
+
+ 
+ <script>
+            var containerEl = document.querySelector('.container');
+            var mixer = mixitup(containerEl);
+        </script>
+
+
+
+	<!--//TESTING RESPONSIVE GRID -->
+	
+	
+	
 	<!--contact -->
 	<div class="welcome contact" id="contact">
 		<div class="container">

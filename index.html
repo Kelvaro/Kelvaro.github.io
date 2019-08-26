@@ -12,17 +12,7 @@
 <!--js-->
 <script type="text/javascript" src="js/ResponsiveGrid.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script> 
-<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-<script type="text/javascript">
-        $(function () {
-            // Instantiate MixItUp:
-            $('#Container1').mixItUp({
-                selectors: {
-                    filter: '.filter'
-                }
-            });
-        });
-    </script>
+<!--<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>-->
 <!-- //js -->
 <!--web-fonts-->
 <link href='//fonts.googleapis.com/css?family=Overlock:400,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -256,7 +246,7 @@
 			<div class="sap_tabs">			
 				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
 					<ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-						<li class="filter active" data-filter="all"><span>All</span></li>
+						<li class="filter" data-filter="all"><span>All</span></li>
 						<li class="filter" data-filter=".html"><span>Html</span></li>
 						<li class="filter" data-filter=".java"><span>Java</span></li>
 						<li class="filter" data-filter=".php"><span>PHP</span></li>					
@@ -322,6 +312,11 @@
 					
 				</div>
 			</div>
+				<script src="js/mixitup.min.js"></script>
+				<script>
+            var containerEl = document.querySelector('.tab_img');
+            var mixer = mixitup(containerEl);
+    </script>
 			<!--ResponsiveTabs-->
 			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 			<script type="text/javascript">
@@ -345,15 +340,10 @@
 		</div>
 	</div>
 	</div>
+
 	<!--//portfolio-->
 	<!--//TESTING RESPONSIVE GRID -->
         
-
- 
- <script>
-            var containerEl = document.querySelector('.container');
-            var mixer = mixitup(containerEl);
-        </script>
 
 
 
